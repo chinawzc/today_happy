@@ -1,0 +1,19 @@
+<!--pages/forecast/forecast.wxml-->
+<view class="forecast-content">
+  <view class='forecast-imgs'>
+    <image wx:for="{{forecast7}}" class="forecast-img"  src="{{item.night[0].img}}" />
+  </view>
+  <view class='forecast-item'>
+    <text class='forecast-day'>日期</text>
+    <text class='forecast-week'>星期</text>
+    <text class='forecast-tem'>温度</text>
+    <text class='forecast-wea'>天气</text>
+  </view>
+  <view class='forecast-item' wx:for="{{forecast7}}">
+    <text class='forecast-day'>{{item.date}}</text>
+    <text class='forecast-week'>{{item.week}}</text>
+    <text class='forecast-tem'>{{item.night[0].temprature}}-{{item.day[0].temprature}}</text>
+    <text class='forecast-wea' wx:if="{{item.day[0].weather ===  item.night[0].weather}}">{{item.day[0].weather}}</text>
+    <text class='forecast-wea' wx:else>{{item.day[0].weather}}转{{item.night[0].weather}}</text>
+  </view>
+</view>

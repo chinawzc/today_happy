@@ -1,0 +1,32 @@
+/* pages/poem_list/poem_list.wxss */
+.poem-list {
+  padding: 10rpx 25rpx;
+}
+.poem-list .word-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.poem-list .word-info .info-des-some,
+.poem-list .word-info .info-des-all {
+  width: 100%;
+  line-height: 22px;
+  font-size: 16px;
+}
+.poem-list .word-info .info-des-some {
+  height: 68px;
+  overflow: hidden;
+}
+.poem-list .word-info .more-info {
+  color: #FF824F;
+  font-size: 12px;
+}
+.poem-list .poem-item {
+  line-height: 30px;
+  color: #FF824F;
+}
+.poem-list .loading {
+  color: #000000;
+  text-align: center;
+}

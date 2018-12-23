@@ -1,0 +1,16 @@
+<view class="today-content">
+  <view class="today-item" wx:for="{{todayList}}">
+    <text class="year">{{item.date}}:</text>
+    <view  class="content" bindtap="viewDetail" data-id="{{item.eid}}">{{item.title}}</view>
+  </view>
+  <picker
+    mode="multiSelector" 
+    bindchange="onChangeDay"
+    value="{{day}}" 
+    range="{{daysList}}"
+  >
+    <button class="btn">
+      日期：<text>{{day}}</text>
+    </button>
+  </picker>
+</view>

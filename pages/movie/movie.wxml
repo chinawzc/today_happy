@@ -1,0 +1,14 @@
+<view class="movie-content">
+  <view class="movie-list">
+    <text class="name">片名</text>
+    <text class="real">今日</text>
+    <text class="total">累计</text>
+    <text class="duration">上映</text>
+  </view>
+  <view wx:for="{{movieList}}" class="movie-list">
+    <text class="name">{{item.movie_name}}</text>
+    <text class="real">{{item.real_office}}</text>
+    <text class="total">{{item.totle_office}}</text>
+    <text class="duration">{{item.duration}}</text>
+  </view>
+</view>

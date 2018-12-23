@@ -1,0 +1,8 @@
+<!--pages/dayDetail/day_detail.wxml-->
+<view class="day-detail">
+  <text>{{detail.title}}</text>
+  <view class='day-pic' wx:for="{{detail.imgs}}">
+    <image src="{{item.url}}"></image>
+  </view>
+  <text>{{detail.content}}</text>
+</view>

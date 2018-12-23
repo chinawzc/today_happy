@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/movie/movie",
+    "pages/today/today",
+    "pages/day_detail/day_detail",
+    "pages/forecast/forecast",
+    "pages/picturePoem/picturePoem",
+    "pages/poem_list/poem_list",
+    "pages/poem_detail/poem_detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF824F",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,7 @@
+<!--pages/poem_detail/poem_detail.wxml-->
+<view class="poem-detail-content">
+  <view class="poem-title">{{poem.biaoti}}</view>
+  <view class="poem-author">{{poem.zuozhe}}</view>
+  <view class="poem-content">{{poem.neirong}}</view>
+  <view class="poem-content" hidden="{{poem.jieshao.length < 10}}">{{poem.jieshao}}</view>
+</view>

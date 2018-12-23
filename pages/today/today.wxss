@@ -1,0 +1,26 @@
+/* pages/today/today.wxss */
+.today-content {
+  padding: 28rpx 28rpx 100rpx;
+  position: relative;
+}
+.today-item {
+  margin-top: 22rpx;
+  margin-bottom: 30rpx;
+}
+.content {
+  color: #FF824F;
+}
+.btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.btn text {
+  color: #FF824F;
+}
+.day-pick {
+  height: 200px;
+  background: #f00;
+}

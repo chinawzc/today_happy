@@ -1,0 +1,27 @@
+<view wx:if="{{loadingIndex}}" class="cal-content-loading">
+  <text>今</text><text>悦</text><text>小</text><text>日</text><text>历</text>
+</view>
+<view wx:else class="cal-content">
+  <view class="cal-date" hover-class="none" hover-stop-propagation="false">
+    {{todayInfo}}
+  </view>
+  <view wx:for="{{calendar}}" wx:for-item="week" class="cal-week" >
+    <text wx:for="{{week}}" class="cal-day {{item.isToday ? 'cal-day-today' : ''}} cal-day-{{item.month}}">{{item.day || item}}</text>
+  </view>
+  <view class="weather-block">
+    <view class="city-name">
+      {{weatherInfo.province}}·{{weatherInfo.city}}
+    </view>
+    <view>当前：{{weatherInfo.now[0].now_temperature}}，{{weatherInfo.now[0].now_wind_direction}}{{weatherInfo.now[0].now_wind_power}}</view>
+    <view class="day-weather" wx:if="{{forecast[1].day[0].weather ===  forecast[1].night[0].weather}}">
+      明日：{{forecast[1].night[0].temprature}}-{{forecast[1].day[0].temprature}}，{{forecast[1].day[0].weather}}<image class="weather-icon" src="{{forecast[1].day[0].img}}"></image>
+    </view>
+    <view class="day-weather" wx:else>
+      明日：{{forecast[1].night[0].temprature}}-{{forecast[1].day[0].temprature}}，{{forecast[1].day[0].weather}}转{{forecast[1].night[0].weather}}<image class="weather-icon" src="{{forecast[1].night[0].img}}"></image>
+    </view>
+  </view>
+  <navigator class="nav-item" url="/pages/forecast/forecast"><image class="weather-icon" src="../../images/weather.png"></image>近期天气</navigator>
+  <navigator class="nav-item" url="/pages/today/today"><image class="weather-icon" src="../../images/history.png"></image>历史上的今天</navigator>
+  <navigator class="nav-item" url="/pages/movie/movie"><image class="weather-icon" src="../../images/movie.png"></image>今日电影票房排行</navigator>
+  <navigator class="nav-item" url="/pages/picturePoem/picturePoem"><image class="weather-icon" src="../../images/aipic.png"></image>图片识诗词</navigator>
+</view>

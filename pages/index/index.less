@@ -1,0 +1,83 @@
+/* pages/index/index.wxss */
+.cal-content {
+  padding: 12rpx;
+  .cal-date {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FF824F;
+    border-bottom: 1px solid #FF824F;
+  }
+  .cal-week {
+    display: flex;
+    justify-content: flex-start;
+    border-right: 1px solid #FF824F;
+  }
+}
+
+.cal-week {
+  display: flex;
+  justify-content: flex-start;
+  border-right: 1px solid #FF824F;
+}
+
+.cal-week:nth-child(1) {
+  border-top: 1px solid #FF824F;
+}
+
+.cal-day {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-left: 1px solid #FF824F;
+  border-bottom: 1px solid #FF824F;
+  text-align: center;
+}
+.cal-day-today {
+  background: #FF824F;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cal-day-0, .cal-day-2 {
+  color: #999;
+}
+
+.weather-block {
+  padding: 10px 0;
+  .city-name {
+    color: #FF824F;
+  }
+  .day-weather {
+    display: flex;
+    align-items: center;
+    .weather-icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+    }
+  }
+}
+
+.nav-item {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  .weather-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+}
+.cal-content-loading {
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+  line-height: 42px;
+  color: #fff;
+  background: #FF824F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

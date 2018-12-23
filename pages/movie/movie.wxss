@@ -1,0 +1,26 @@
+/* pages/movie/movie.wxss */
+.movie-content {
+  padding: 10rpx;
+}
+.movie-list {
+  display: flex;
+  padding: 10rpx 0;
+  align-items: center;
+  border-bottom: 1px solid #FF824F;
+}
+.movie-list text {
+  padding: 0 5rpx;
+}
+.name {
+  flex: 5;
+}
+.duration {
+  flex: 2;
+}
+.real {
+  flex: 3;
+}
+.total {
+  flex: 3;
+}
+

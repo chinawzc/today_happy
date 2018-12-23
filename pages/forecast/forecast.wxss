@@ -1,0 +1,38 @@
+/* pages/forecast/forecast.wxss */
+.forecast-content {
+  padding: 10rpx;
+}
+.forecast-content .forecast-imgs {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  margin: 15rpx 0;
+}
+.forecast-content .forecast-imgs .forecast-img {
+  width: 26px;
+  height: 26px;
+}
+.forecast-content .forecast-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #FF824F;
+  padding: 10rpx;
+}
+.forecast-content .forecast-item text {
+  display: flex;
+  align-items: center;
+}
+.forecast-content .forecast-item .forecast-day {
+  width: 200rpx;
+}
+.forecast-content .forecast-item .forecast-week {
+  display: block;
+  width: 160rpx;
+}
+.forecast-content .forecast-item .forecast-tem {
+  width: 180rpx;
+}
+.forecast-content .forecast-item .forecast-wea {
+  width: 180rpx;
+}

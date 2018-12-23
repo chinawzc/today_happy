@@ -1,0 +1,25 @@
+<!--pages/poem_list/poem_list.wxml-->
+<view class="poem-list">
+    <view class="word-info">
+      <image class="info-img" hidden="{{!wordInfo.image_url}}" src="{{wordInfo.image_url}}" mode="aspectFit" />
+      <text class="info-des-all" wx:if="{{isAllDes}}" >
+        {{wordInfo.description}}
+      </text>
+      <text class="info-des-some" wx:else >
+        {{wordInfo.description}}
+      </text>
+      <view class="more-info" bindtap="seeMoreDes" hidden="{{isAllDes || !wordInfo.description}}">查看全部介绍>></view>
+    </view>
+    <view hidden="{{wordInfo.description}}">
+      暂无相关介绍
+    </view>
+    <view wx:for="{{poemList}}" class="poem-item" bindtap="getPoemDetail"  data-id="{{item.id}}">
+      {{index+1}}.{{item.name}}
+    </view>
+    <view hidden="{{poemList.length}}">
+      暂无相关诗词
+    </view>
+    <view hidden="{{!isLoadingMore}}" class="loading">
+      玩命加载中...
+    </view>
+  </view>

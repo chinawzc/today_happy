@@ -1,0 +1,14 @@
+.poem-detail-content {
+  padding: 10rpx 20rpx;
+}
+.poem-detail-content .poem-title,
+.poem-detail-content .poem-author {
+  line-height: 30px;
+}
+.poem-detail-content .poem-title {
+  color: #FF824F;
+}
+.poem-detail-content .poem-content {
+  white-space: pre-wrap;
+  margin: 15rpx 0;
+}

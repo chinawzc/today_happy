@@ -1,0 +1,29 @@
+<!--pages/picturePoem/picturePoem.wxml-->
+<view class="pic-poem-content">
+  <button class="upload-pic" type="primary" bindtap="selectPic">上传照片</button>
+  <view class="uploaded-pic">
+    <image src="{{imageUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" />
+  </view>
+  <view class="ai-result" hidden="{{isLoading}}">
+    <view class="upload-info">
+      <text class="pic-word">-{{picWord}}-</text>
+    </view>
+    <view hidden="{{poemList.length}}">
+      暂无 {{picWord}} 相关诗词
+    </view>
+    <view class="poem-list">
+      <view wx:for="{{poemList}}" class="poem-item" bindtap="getPoemDetail" data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+      <view class="poem-seemore" hidden="{{!hasMore}}" bindtap="goPoems" data-wordinfo="{{picWords[0]}}">
+        查看更多>>>
+      </view>
+    </view>
+    <view class="words-list-title">全部图片识别信息：</view>
+    <view class="words-list">
+      <view wx:for="{{picWords}}" bindtap="goPoems" data-wordinfo="{{item}}" class="words-list-text">
+        {{item.keyword}}
+      </view>
+    </view>
+  </view>
+</view>
