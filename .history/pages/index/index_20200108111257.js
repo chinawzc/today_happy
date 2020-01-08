@@ -36,8 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-      console.log('master-2');
-      
+
   },
 
   /**
@@ -45,7 +44,6 @@ Page({
    */
   onHide: function () {
       console.log(2-'c')
-      console.log(2-'d')
   },
 
   /**
