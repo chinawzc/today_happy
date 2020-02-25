@@ -15,6 +15,7 @@ Page({
    */
   onLoad: function (options) {
       console.log(1);
+      console.log('br-e\'');
       
     this.fetchDayDetail(options.id);
   },
